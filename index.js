@@ -6,10 +6,9 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use((req, res, next) => {
-  const corsWhitelist = [
-    'http://localhost:3000',
-    'https://localhost:3000'
-  ]
+  const corsWhitelist = process.env.NODE_ENV === 'development'
+    ?['http://localhost:3000', 'https://localhost:3000']
+    : ['https://cook-this-app.netlify.app']
   if (corsWhitelist.indexOf(req.headers.origin) !== -1) {
     res.header('Access-Control-Allow-Origin', req.headers.origin);
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
