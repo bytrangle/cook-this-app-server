@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "tsdbadmin",
+    "password": "k1nmpnf8tof1n2xq",
+    "database": "tsdb",
+    "host": "ldrbhqu5bh.qc0s30rkwr.tsdb.cloud.timescale.com",
+    "dialect": "postgres",
+    "port": 37331
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
