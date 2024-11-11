@@ -1,0 +1,1 @@
+Server for connecting to a PostgreSQL database and handing user query from the frontend app.
